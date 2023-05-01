@@ -14,14 +14,7 @@ jobs:
       uses: ok-nick/setup-aftman@v0.3.0
       with:
         version: v0.2.7
-        path: "."
         token: ${{ github.token }}
-    - name: Create aftman toml
-      run: aftman self-install
-    - name: Install Rojo
-      run: aftman add rojo-rbx/rojo
-    - name: Install Rojo 7.3.0
-      run: aftman add rojo-rbx/rojo@7.3.0
     - name: Build place file
       run: rojo build -o game.rbxl
     - name: Publish place

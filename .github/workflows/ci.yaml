@@ -10,13 +10,11 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v3
-    - name: Install aftman
-      uses: ok-nick/setup-aftman@v0.3.0
+    - name: Install foreman
+      uses: Roblox/setup-foreman@v1
       with:
-        version: v0.2.7
-        token: ${{ github.token }}
-    - name: Install Selene
-      run: cargo install selene
+        version: "1.1.0"
+        token: ${{ secrets.GITHUB_TOKEN }}
     - name: Lint
       run: |
         selene ./src

@@ -15,6 +15,7 @@ jobs:
       with:
         version: v0.2.7
         token: ${{ github.token }}
+    - name: Create aftman toml
       run: aftman self-install
     - name: Install Rojo
       run: aftman add rojo-rbx/rojo

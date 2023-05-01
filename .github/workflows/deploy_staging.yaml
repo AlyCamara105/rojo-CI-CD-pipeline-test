@@ -15,6 +15,7 @@ jobs:
       with:
         version: v0.2.7
         token: ${{ github.token }}
+      run: aftman self-install
     - name: Install Rojo
       run: aftman add rojo-rbx/rojo
     - name: Install Rojo 7.3.0

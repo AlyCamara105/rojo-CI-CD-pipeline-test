@@ -17,6 +17,7 @@ jobs:
         token: ${{ github.token }}
     - name: Install Rojo
       run: aftman add rojo-rbx/rojo
+    - name: Install Rojo 7.3.0
       run: aftman add rojo-rbx/rojo@7.3.0
     - name: Build place file
       run: rojo build -o game.rbxl

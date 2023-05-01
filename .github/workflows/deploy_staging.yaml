@@ -14,6 +14,7 @@ jobs:
       uses: ok-nick/setup-aftman@v0.3.0
       with:
         version: v0.2.7
+        path: "."
         token: ${{ github.token }}
     - name: Create aftman toml
       run: aftman self-install
